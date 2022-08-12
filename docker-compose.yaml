@@ -5,9 +5,9 @@ services:
             context: .
             dockerfile: dockerfile.dev
         command: npm run start
-        container_name: vanshika
+        container_name: mohit
         ports:
-            - "3000:3000"        
+            - "3001:3001"        
         volumes: 
             - ./:/frontend
             - /frontend/node_modules
