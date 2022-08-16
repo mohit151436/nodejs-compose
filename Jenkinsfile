@@ -5,6 +5,10 @@ pipeline {
     } 
   
   agent any   
+    docker {
+            image 'application_node_frontend:latest'
+            args '-p 3000:3000'
+        }
   stages {    
     stage('Build') {
       steps {
