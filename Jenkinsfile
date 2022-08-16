@@ -1,13 +1,16 @@
 pipeline {
+    agent {
+        docker {
+            image 'application_node_frontend:latest'
+            args '-p 3000:3000'
+        }
+    }
     parameters {
         string(name: 'nodejs', defaultValue: 'latest')
         booleanParam(name: 'dryRun', defaultValue: false)
     } 
-  agent   
-    docker {
-            image 'application_node_frontend:latest'
-            args '-p 3000:3000'
-        }
+  
+  agent any   
   stages {    
     stage('Build') {
       steps {
