@@ -8,6 +8,6 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker tag nodejs_frontend:latest ${nodejs}'
+        sh 'docker tag nodejs_frontend:latest ${nodejs}'
         sh 'docker-compose -f docker-compose.yaml up -d'
       }}}}
