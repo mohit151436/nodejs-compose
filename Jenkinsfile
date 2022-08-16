@@ -9,11 +9,8 @@ pipeline {
             image 'application_node_frontend:latest'
             args '-p 3000:3000'
         }
-    }
-        
-  stages {
-        
-    
+    }       
+  stages {    
     stage('Build') {
       steps {
         sh 'npm install'
