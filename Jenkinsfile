@@ -16,6 +16,12 @@ pipeline {
         sh 'docker tag application_node_frontend:latest application_node_frontend:${nodejs}'
 
       }
-    }  
+    }
+   agent {
+        docker {
+            image 'application_node_frontend:latest'
+            args '-p 3000:3000'
+        }
+    }     
   }
 }
