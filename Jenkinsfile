@@ -1,6 +1,6 @@
 pipeline {
     parameters {
-        string(name: '', defaultValue: 'latest')
+        string(name: 'nodejs', defaultValue: 'latest')
         booleanParam(name: 'dryRun', defaultValue: false)
     } 
   
