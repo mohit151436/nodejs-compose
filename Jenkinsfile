@@ -1,7 +1,7 @@
 pipeline {
     parameters {
         string(name: 'nodejs', defaultValue: 'latest')
-       # booleanParam(name: 'dryRun', defaultValue: false)
+        booleanParam(name: 'dryRun', defaultValue: false)
     }             
   agent any
   tools {nodejs "node"}
